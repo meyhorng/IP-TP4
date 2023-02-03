@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap');
+:root{
+    --font-header: 'Nunito', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-header);
+}
+body{
+    
+    width: 100%;
+    height: 100vh;
+    #container{
+        background-color: #f1f5f8;
+        width: 100%;
+        min-height: 100%;
+        padding: 1rem 0;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        .header{
+            text-align: center;
+            h1{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1.3rem;
+            }
+        }
+        .content_wraper{
+            width: 90%;
+            display: flex;
+            gap: .7rem;
+            flex-direction: row;
+            @media only screen and (max-width: 1000px){
+                flex-direction: column;
+            }
+            div{
+                width: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .img_container{
+                border-radius: .8rem;
+                overflow: hidden;
+            }
+            .sub_wrapper{
+                background-color: white;
+                border-radius: .7rem;
+                overflow: hidden;
+                .btn_wraper{
+                    width: 100%;
+                    display: flex;
+                    button{
+                        width: 100%;
+                        padding: .5rem .7rem;
+                        border: none;
+                        outline: navajowhite;
+                        border-radius: unset;
+                        background-color: #dbe2eb;
+                        cursor: pointer;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        &:hover{
+                            background-color: #f1f5f8;
+                        }
+                        &.active{
+                            background-color: white;
+                        }
+                    }
+                }
+                .content{
+                    display: flex;
+                    overflow:hidden;
+                    transition: 250ms;
+                    div{
+                        padding: 1rem;
+                        min-width: 100%;
+                        display: inline-block;
+                        // flex-grow: 1;
+                        transition: 250ms;
+                        transform: translateX(var(--transform-percen));
+                        p{
+                            font-size: 1.2rem;
+                        }
+                        h1{
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
